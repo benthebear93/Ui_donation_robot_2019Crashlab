@@ -24,10 +24,9 @@ env : linux 16.04 , ros kinetic
 
 To run the node ```rosrun merry_bot merry_bot```
 
-![](/home/benlee/Pictures/Donation_start.png)
+![Donation_start](https://user-images.githubusercontent.com/34788458/69546357-f2413880-0fd6-11ea-8834-46fe86dbc117.png)
 
 press Donation Start
 
 will send it to this window.
-
-![](/home/benlee/Pictures/merry_check.png)
+![merry_check](https://user-images.githubusercontent.com/34788458/69546360-f53c2900-0fd6-11ea-9cc5-4c8163ef575c.png)
