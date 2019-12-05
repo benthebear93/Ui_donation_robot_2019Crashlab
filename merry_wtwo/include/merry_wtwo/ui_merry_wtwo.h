@@ -67,7 +67,7 @@ public:
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         label = new QLabel(centralWidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setPixmap(QPixmap(QString::fromUtf8("/home/benlee/catkin_ws/src/merry_wtwo/image/bear.png")));
+        label->setPixmap(QPixmap(QString::fromUtf8("/home/benlee/catkin_ws/src/Ui_donation_robot_2019Crashlab/merry_wtwo/image/bear.png")));
         label->setAlignment(Qt::AlignCenter);
 
         gridLayout_2->addWidget(label, 0, 0, 1, 1);
@@ -80,7 +80,7 @@ public:
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         label_3 = new QLabel(centralWidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setPixmap(QPixmap(QString::fromUtf8("/home/benlee/catkin_ws/src/merry_wtwo/image/qrcode_50.png")));
+        label_3->setPixmap(QPixmap(QString::fromUtf8("/home/benlee/catkin_ws/src/Ui_donation_robot_2019Crashlab/merry_wtwo/image/qrcode_50.png")));
         label_3->setAlignment(Qt::AlignCenter);
 
         gridLayout->addWidget(label_3, 0, 0, 1, 1);
