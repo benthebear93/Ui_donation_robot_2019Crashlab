@@ -3,7 +3,6 @@
 #include "ui_merry_win.h"
 
 #include <ros/ros.h>
-#include <string>
 #include <std_msgs/Int32.h>
 
 #include <iostream>
@@ -24,12 +23,10 @@ namespace merry_win{
 	    ui(new Ui::merry_win)
 	{
         if(qnode.init()) isConnected = true;
-        //if(window_open == 0){
-        cout<<"setup ui"<<endl;
-        //cout<<"window_open :" << window_open << endl;
+        QObject::connect(&qnode, SIGNAL(window_state1()),this,SLOT(close_w1()));
+        //cout<<"setup ui"<<endl;
         ui->setupUi(this);
         //QMainWindow::show();
-        //}
         //QMainWindow::showFullScreen();
 	}
 
@@ -48,9 +45,16 @@ namespace merry_win{
 void merry_win::merry_win::on_pushButton_clicked()
 {
 	merry_win::pushed = 1;
-    cout << "pushed :"<< merry_win::pushed << endl;
+    //cout << "pushed :"<< merry_win::pushed << endl;
     qnode.button_msg_.pushcheck = merry_win::pushed;
     qnode.send_pushed();
-    //this->hide();
-
+    this->hide();
 } 
+void merry_win::merry_win::close_w1()
+{
+    cout<< "in close_w1" << endl;
+    this->show();
+} 
+
+///////////////////////////////////////////////////////////
+

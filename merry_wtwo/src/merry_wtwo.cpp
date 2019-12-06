@@ -3,7 +3,6 @@
 #include "merry_wtwo/ui_merry_wtwo.h"
 
 #include <ros/ros.h>
-#include <string>
 #include <std_msgs/Int32.h>
 
 #include <iostream>
@@ -24,8 +23,10 @@ namespace merry_wtwo{
 	    ui(new Ui::merry_wtwo)
 	{
         if(qnode.init()) isConnected = true;
-        cout << "setup ui " << endl;
+        QObject::connect(&qnode, SIGNAL(window_state2()),this,SLOT(close_w2()));
+        //cout << "setup ui " << endl;
         ui->setupUi(this);
+        //this->hide();
         //QMainWindow::showFullScreen();
 	}
 
@@ -44,8 +45,13 @@ namespace merry_wtwo{
 void merry_wtwo::merry_wtwo::on_pushButton_clicked()
 {
 	merry_wtwo::pushed = 1;
-    cout << "pushed :"<< merry_wtwo::pushed << endl;
+    //cout << "pushed :"<< merry_wtwo::pushed << endl;
     qnode.button_msg_.pushcheck = merry_wtwo::pushed;
     qnode.send_pushed();
-    //this->hide();
+    this->hide();
+}
+void merry_wtwo::merry_wtwo::close_w2()
+{
+    cout<< "in close_w2" << endl;
+    this->show();
 }

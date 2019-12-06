@@ -2,20 +2,17 @@
 //task_node
 #include <ros/ros.h>
 #include <ros/network.h>
-#include <string>
 #include <std_msgs/Int32.h>
 #include "merry_win/ros_task.h"
 #include <iostream>
 using namespace std;
 
 namespace merry_win{
-  bool window_open = 0;
-
-      void sub_callback(const merry_win::TaskCommand::ConstPtr& msg)
+  bool window2_open = 0;
+    void sub_callback(const merry_win::TaskCommand::ConstPtr& msg)
     {
-      ROS_INFO("show donation start window ");
-      window_open = 1; 
-      ROS_INFO("window change %d", window_open );
+      ROS_INFO("show w1");
+      window2_open = 1; 
     }
     ros_task::ros_task(int argc, char** argv ) :
       init_argc(argc),
@@ -37,7 +34,7 @@ namespace merry_win{
 
     bool ros_task::init() 
     {
-      cout <<"init is here" <<endl;
+      //cout <<"init is here" <<endl;
       ros::init(init_argc,init_argv,"merry_win");
       if ( ! ros::master::check() ) 
       {
@@ -54,27 +51,28 @@ namespace merry_win{
         nh = new ros::NodeHandle("merry_win");
 
         w1_button_pub = nh->advertise<merry_win::TaskCommand>("/merry_win/button_msg_1", 10);
-        //w1_start_sub =nh->subscribe("/merry_wtwo/button_msg_", 10, sub_callback); 
-        cout<<"init nh"<<endl;
+        w2_start_sub =nh->subscribe("/merry_wtwo/button_msg_2", 10, sub_callback);  
+        
+        //cout<<"init nh"<<endl;
         isConnected = true;
       }
 
     void ros_task::run()
     {
-      //ros::Rate loop_rate(100);
-      // while(ros::ok())
-      // {
-      w2_start_sub =nh->subscribe("/merry_wtwo/button_msg_2", 10, sub_callback); 
-      ros::spin();
-      //loop_rate.sleep();
-      //cout<<window_open<<endl;
-      //cout<<"here"<< endl;
-      // if(window_open == 1)
-      // {
-      //   cout<<"wo"<<window_open<<endl;
-      // }
-      //}
-      //std::cout << "Ros shutdown, proceeding to close the gui." << std::endl;
+      ros::Rate loop_rate(10);
+      while(ros::ok())
+      {
+        if(window2_open == 1)
+        {
+          Q_EMIT window_state1();
+          cout<<"wo"<<window2_open<<endl;
+          window2_open = 0;
+        }
+
+        ros::spinOnce();
+        loop_rate.sleep();
+      }
+      std::cout << "Ros shutdown, proceeding to close the gui." << std::endl;
     }
 
     void ros_task::send_pushed()

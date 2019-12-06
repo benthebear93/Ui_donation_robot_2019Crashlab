@@ -6,12 +6,10 @@
 #include <QPushButton>
 
 #include <ros/ros.h>
-#include <string>
 #include <std_msgs/Int32.h>
 #include <std_msgs/String.h>
 #include "merry_win/ros_task.h"
 #include "merry_win/ui_merry_win.h"
-
 
 #endif
 
@@ -28,6 +26,7 @@ namespace merry_win {
 
 	public Q_SLOTS:
 	    void on_pushButton_clicked();
+	    void close_w1();
 
 	private:
 	    Ui::merry_win *ui;

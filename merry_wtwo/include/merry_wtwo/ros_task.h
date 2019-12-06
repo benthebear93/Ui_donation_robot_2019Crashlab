@@ -20,6 +20,7 @@
 #endif
 
 namespace merry_wtwo{
+extern bool window1_open;
 
 class ros_task : public QThread{
     Q_OBJECT
@@ -34,6 +35,8 @@ public:
     void send_pushed();
 
     merry_wtwo::TaskCommand button_msg_;
+Q_SIGNALS:
+    void window_state2();
 
 
 private:

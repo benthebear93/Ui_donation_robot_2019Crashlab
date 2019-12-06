@@ -20,7 +20,8 @@
 #endif
 
 namespace merry_win{
-extern bool window_open;
+extern bool window2_open;
+
 class ros_task : public QThread{
     Q_OBJECT
 
@@ -34,13 +35,15 @@ public:
     void send_pushed();
 
     merry_win::TaskCommand button_msg_;
-    //extern bool window_open;
 
+Q_SIGNALS:
+    void window_state1();
 
 private:
     int init_argc;
     char** init_argv;
-    
+
+    int m_value;
     ros::Publisher w1_button_pub;
     ros::Subscriber w2_start_sub;
 

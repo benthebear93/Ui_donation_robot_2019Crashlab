@@ -66,7 +66,7 @@ public:
 
         label = new QLabel(centralWidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setPixmap(QPixmap(QString::fromUtf8("/home/benlee/catkin_ws/src/merry_win/image/bear_chat.jpg")));
+        label->setPixmap(QPixmap(QString::fromUtf8("/home/benlee/catkin_ws/src/Ui_donation_robot_2019Crashlab/merry_win/image/bear_chat.jpg")));
 
         verticalLayout->addWidget(label);
 
