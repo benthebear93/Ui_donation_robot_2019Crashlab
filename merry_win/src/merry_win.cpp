@@ -27,7 +27,7 @@ namespace merry_win{
         //cout<<"setup ui"<<endl;
         ui->setupUi(this);
         //QMainWindow::show();
-        //QMainWindow::showFullScreen();
+        QMainWindow::showFullScreen();
 	}
 
 	merry_win::~merry_win()

@@ -33,7 +33,7 @@ namespace merry_wtwo {
 	    ros_task qnode;
 	    bool isConnected;
 	public:
-		bool pushed;
+		int pushed;
 	};
 }
 #endif // merry_wtwo_H

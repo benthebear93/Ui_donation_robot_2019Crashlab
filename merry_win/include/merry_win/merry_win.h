@@ -33,7 +33,7 @@ namespace merry_win {
 	    ros_task qnode;
 	    bool isConnected;
 	public:
-		bool pushed;
+		int pushed;
 	};
 }
 #endif // MERRY_WIN_H

@@ -1,0 +1,4 @@
+music_list:
+  - "/home/benlee/catkin_ws/src/merry_sound/music/music.mp3"
+vocal_list:
+  - "/home/benlee/catkin_ws/src/merry_sound/music/thank_you.mp3"
