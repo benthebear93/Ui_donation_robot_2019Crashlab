@@ -53,7 +53,9 @@ void merry_win::merry_win::on_pushButton_clicked()
 void merry_win::merry_win::close_w1()
 {
     cout<< "in close_w1" << endl;
+    this->setWindowFlags(Qt::FramelessWindowHint|Qt::WindowStaysOnTopHint);
     this->show();
+    this->showFullScreen();
 } 
 
 ///////////////////////////////////////////////////////////

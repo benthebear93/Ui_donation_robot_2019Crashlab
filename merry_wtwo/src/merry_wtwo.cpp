@@ -27,6 +27,7 @@ namespace merry_wtwo{
         //cout << "setup ui " << endl;
         ui->setupUi(this);
         //this->hide();
+        //QMainWindow::showFullScreen();
 	}
 
 	merry_wtwo::~merry_wtwo()
@@ -52,6 +53,7 @@ void merry_wtwo::merry_wtwo::on_pushButton_clicked()
 void merry_wtwo::merry_wtwo::close_w2()
 {
     cout<< "in close_w2" << endl;
+    this->setWindowFlags(Qt::FramelessWindowHint|Qt::WindowStaysOnTopHint);
     this->showFullScreen();
     //QMainWindow::showFullScreen();
 }
