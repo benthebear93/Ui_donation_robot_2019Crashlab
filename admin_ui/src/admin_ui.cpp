@@ -81,7 +81,7 @@ void admin_ui::admin_ui::on_end_button_clicked()
 
 void admin_ui::admin_ui::on_sound_putton_clicked()
 {
-	admin_ui::sound = 1;
+	admin_ui::sound = 9;
 	qnode.Test_Sound.data = admin_ui::sound;
 	qnode.send_Test_Sound();
 }
