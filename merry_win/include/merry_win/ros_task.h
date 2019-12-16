@@ -38,6 +38,7 @@ public:
 
 Q_SIGNALS:
     void window_state1();
+    void admin_ui();
 
 private:
     int init_argc;
@@ -46,6 +47,7 @@ private:
     int m_value;
     ros::Publisher w1_button_pub;
     ros::Subscriber w2_start_sub;
+    ros::Subscriber admin_end_sub;
 
     ros::NodeHandle *nh;
     bool isConnected;

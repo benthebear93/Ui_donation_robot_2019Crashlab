@@ -9,10 +9,16 @@ using namespace std;
 
 namespace merry_win{
   bool window2_open = 0;
+  bool admin_close = 0;
     void sub_callback(const merry_win::TaskCommand::ConstPtr& msg)
     {
       ROS_INFO("show w1");
       window2_open = 1; 
+    }
+    void sub_admin_callback(const std_msgs::Int32::ConstPtr& msg)
+    {
+      ROS_INFO("admin_close");
+      admin_close = 1; 
     }
     ros_task::ros_task(int argc, char** argv ) :
       init_argc(argc),
@@ -52,7 +58,7 @@ namespace merry_win{
 
         w1_button_pub = nh->advertise<merry_win::TaskCommand>("/merry_win/button_msg_1", 10);
         w2_start_sub =nh->subscribe("/merry_wtwo/button_msg_2", 10, sub_callback);  
-        
+        admin_end_sub =nh->subscribe("/admin_ui/test_end", 10, sub_admin_callback);
         //cout<<"init nh"<<endl;
         isConnected = true;
       }
@@ -67,6 +73,12 @@ namespace merry_win{
           Q_EMIT window_state1();
           cout<<"wo"<<window2_open<<endl;
           window2_open = 0;
+        }
+        if(admin_close == 1)
+        {
+          Q_EMIT admin_ui();
+          cout<<"admin to w1"<<endl;
+          admin_close = 0;
         }
 
         ros::spinOnce();

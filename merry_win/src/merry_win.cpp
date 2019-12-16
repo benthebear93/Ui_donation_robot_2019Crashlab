@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include <QMessageBox>
-#include <string>
+#include <sstream>
 #include <math.h>
 #include <stdlib.h>
 #include <QtGui>
@@ -24,10 +24,10 @@ namespace merry_win{
 	{
         if(qnode.init()) isConnected = true;
         QObject::connect(&qnode, SIGNAL(window_state1()),this,SLOT(close_w1()));
-        //cout<<"setup ui"<<endl;
+        QObject::connect(&qnode, SIGNAL(admin_ui()),this,SLOT(close_w1()));
         ui->setupUi(this);
         //QMainWindow::show();
-        QMainWindow::showFullScreen();
+        //QMainWindow::showFullScreen();
 	}
 
 	merry_win::~merry_win()
@@ -57,6 +57,12 @@ void merry_win::merry_win::close_w1()
     this->show();
     this->showFullScreen();
 } 
-
+void merry_win::merry_win::open_w1()
+{
+    cout<< "in open_w1" << endl;
+    this->setWindowFlags(Qt::FramelessWindowHint|Qt::WindowStaysOnTopHint);
+    this->show();
+    this->showFullScreen();
+} 
 ///////////////////////////////////////////////////////////
 

@@ -175,7 +175,7 @@ public:
         label_4->setText(QApplication::translate("merry_wtwo", "\352\270\260\353\266\200\354\227\220 \353\214\200\355\225\234 \354\236\220\354\204\270\355\225\234 \354\204\244\353\252\205\354\235\204 \354\234\204\355\225\264 ", 0, QApplication::UnicodeUTF8));
         label_5->setText(QApplication::translate("merry_wtwo", "\353\251\224\353\246\254\352\263\260\354\235\204 \354\271\234\352\265\254\354\266\224\352\260\200\355\225\264\354\243\274\354\204\270\354\232\224! \354\271\264\354\271\264\354\230\244\355\206\241 : ERICA\353\251\224\353\246\254\352\263\260 \352\262\200\354\203\211", 0, QApplication::UnicodeUTF8));
         label_6->setText(QApplication::translate("merry_wtwo", "\353\230\220\353\236\230\355\212\234\355\204\260\353\247\201X\355\201\254\353\236\230\354\211\254\353\236\251 \353\251\224\353\246\254\352\263\260", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("merry_wtwo", "Shinhan Bank 110-376-383888", 0, QApplication::UnicodeUTF8));
+        label_2->setText(QApplication::translate("merry_wtwo", "카카오뱅크 3333-08-3122893(이해구)", 0, QApplication::UnicodeUTF8));
         label_7->setText(QApplication::translate("merry_wtwo", "\352\270\260\353\266\200\352\260\200 \353\201\235\353\202\230\353\251\264 \352\274\255 \353\262\204\355\212\274 \353\210\214\353\237\254\354\243\274\354\204\270\354\232\244", 0, QApplication::UnicodeUTF8));
         pushButton->setText(QApplication::translate("merry_wtwo", "Donation End \342\231\245", 0, QApplication::UnicodeUTF8));
     } // retranslateUi

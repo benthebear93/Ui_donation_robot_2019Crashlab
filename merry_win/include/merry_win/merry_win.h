@@ -27,6 +27,7 @@ namespace merry_win {
 	public Q_SLOTS:
 	    void on_pushButton_clicked();
 	    void close_w1();
+	    void open_w1();
 
 	private:
 	    Ui::merry_win *ui;

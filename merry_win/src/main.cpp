@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     merry_win::merry_win w(argc,argv);
 
-    w.show();
+    //w.show();
 
 
     return a.exec();
