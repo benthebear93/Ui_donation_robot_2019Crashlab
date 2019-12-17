@@ -24,7 +24,7 @@ namespace merry_win{
 	{
         if(qnode.init()) isConnected = true;
         QObject::connect(&qnode, SIGNAL(window_state1()),this,SLOT(close_w1()));
-        QObject::connect(&qnode, SIGNAL(admin_ui()),this,SLOT(close_w1()));
+        QObject::connect(&qnode, SIGNAL(admin_ui()),this,SLOT(open_w1()));
         ui->setupUi(this);
         //QMainWindow::show();
         //QMainWindow::showFullScreen();

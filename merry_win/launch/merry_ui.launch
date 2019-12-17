@@ -1,0 +1,10 @@
+<launch>
+	<node name="admin_ui" pkg="admin_ui" type="admin_ui">
+	</node>
+	<node name="merry_win" pkg="merry_win" type="merry_win">
+	</node>
+	<node name="merry_wtwo" pkg="merry_wtwo" type="merry_wtwo">
+	</node>
+	<node name="merry_sound" pkg="merry_sound" type="m_sound.py">
+	</node>
+</launch>

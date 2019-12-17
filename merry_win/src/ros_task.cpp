@@ -12,6 +12,7 @@ namespace merry_win{
   bool admin_close = 0;
     void sub_callback(const merry_win::TaskCommand::ConstPtr& msg)
     {
+      cout <<" sub is working shitttttt"<<endl;
       ROS_INFO("show w1");
       window2_open = 1; 
     }

@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
     merry_win::merry_win w(argc,argv);
 
     //w.show();
+    //w.showFullScreen();
 
 
     return a.exec();
