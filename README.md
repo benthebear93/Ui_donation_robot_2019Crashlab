@@ -1,7 +1,7 @@
 # Ui for Donation robot
 
 * ubuntu 16.04 LTS 64BIT
-* ROS Kinect
+* ROS kinetic
 * Qt 5.5.1
 * dependency : qt_ros(qt_build) : https://github.com/stonier/qt_ros
 
