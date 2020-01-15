@@ -20,9 +20,9 @@
 #endif
 
 namespace admin_ui{
-    extern int psb_l_val;
-    extern int psb_m_val;
-    extern int psb_r_val;
+    //extern int psb_l_val;
+    //extern int psb_m_val;
+    //extern int psb_r_val;
 
 class ros_task : public QThread{
     Q_OBJECT

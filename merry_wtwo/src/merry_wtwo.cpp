@@ -54,6 +54,7 @@ void merry_wtwo::merry_wtwo::close_w2()
 {
     cout<< "in close_w2" << endl;
     this->setWindowFlags(Qt::FramelessWindowHint|Qt::WindowStaysOnTopHint);
-    this->showFullScreen();
+    this->show();
+    //this->showFullScreen();
     //QMainWindow::showFullScreen();
 }

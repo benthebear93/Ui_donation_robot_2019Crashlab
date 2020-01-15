@@ -55,14 +55,14 @@ void merry_win::merry_win::close_w1()
     cout<< "in close_w1" << endl;
     this->setWindowFlags(Qt::FramelessWindowHint|Qt::WindowStaysOnTopHint);
     this->show();
-    this->showFullScreen();
+    //this->showFullScreen();
 } 
 void merry_win::merry_win::open_w1()
 {
     cout<< "in open_w1" << endl;
     this->setWindowFlags(Qt::FramelessWindowHint|Qt::WindowStaysOnTopHint);
     this->show();
-    this->showFullScreen();
+    //this->showFullScreen();
 } 
 ///////////////////////////////////////////////////////////
 

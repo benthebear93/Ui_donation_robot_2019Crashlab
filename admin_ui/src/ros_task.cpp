@@ -8,9 +8,11 @@
 using namespace std;
 
 namespace admin_ui{
-  int psb_l_val =0;
-  int psb_m_val =0;
-  int psb_r_val =0;
+  int psb_l_val = 0; 
+  int psb_m_val = 0;
+  int psb_r_val = 0;
+    // psd value for each psd sensors
+    // need to be used in admin_ui.cpp, use the 'extern'
 
     void callback_psdl(const std_msgs::Int32::ConstPtr& msg)
     {
@@ -72,7 +74,6 @@ namespace admin_ui{
         psd_m =nh->subscribe("/psd_m", 10, callback_psdm);  
         psd_r =nh->subscribe("/psd_r", 10, callback_psdr);  
         
-        //cout<<"init nh"<<endl;
         isConnected = true;
       }
 

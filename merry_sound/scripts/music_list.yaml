@@ -12,7 +12,7 @@ music_list:
   - "/home/benlee/catkin_ws/src/Ui_donation_robot_2019Crashlab/merry_sound/music/music10.mp3"
 vocal_list:
   - "/home/benlee/catkin_ws/src/Ui_donation_robot_2019Crashlab/merry_sound/music/thank_you.mp3"
-  - "/home/benlee/catkin_ws/src/Ui_donation_robot_2019Crashlab/merry_sound/music/thank_you.mp3"
-  - "/home/benlee/catkin_ws/src/Ui_donation_robot_2019Crashlab/merry_sound/music/thank_you.mp3"
-  - "/home/benlee/catkin_ws/src/Ui_donation_robot_2019Crashlab/merry_sound/music/thank_you.mp3"
+  - "/home/benlee/catkin_ws/src/Ui_donation_robot_2019Crashlab/merry_sound/music/beep.mp3"
+  - "/home/benlee/catkin_ws/src/Ui_donation_robot_2019Crashlab/merry_sound/music/donation explain.mp3"
+  - "/home/benlee/catkin_ws/src/Ui_donation_robot_2019Crashlab/merry_sound/music/donation end.mp3"
   - "/home/benlee/catkin_ws/src/Ui_donation_robot_2019Crashlab/merry_sound/music/thank_you.mp3"

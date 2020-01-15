@@ -31,7 +31,7 @@ namespace admin_ui{
 		QObject::connect(&qnode, SIGNAL(sub_psd_r()),this,SLOT(change_label_psd_r()));
 		//connect(ui->sound_putton,SIGNAL(clicked()),this,SLOT(on_pushButton_clicked()));
 	    ui->setupUi(this);
-        QMainWindow::showFullScreen();
+        //QMainWindow::showFullScreen();
    	}
 
 	admin_ui::~admin_ui()
