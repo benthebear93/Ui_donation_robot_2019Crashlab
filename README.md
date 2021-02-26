@@ -27,7 +27,8 @@
 ​	donation information and ```donation start``` button 
 
 #### merry_wtwo
-![donation_end](https://user-images.githubusercontent.com/34788458/72436296-72b83480-37e3-11ea-8dac-a930ef285e17.png)
+
+계좌 노출로 사진 삭제
 
 ​	```donation end``` button and play music 
 
